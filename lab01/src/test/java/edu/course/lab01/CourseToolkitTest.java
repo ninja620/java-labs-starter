@@ -20,4 +20,9 @@ class CourseToolkitTest {
 
         assertFalse(result);
     }
+    @Test
+    void testIsEvenZero() {
+        // Проверяем, что для 0 метод возвращает true, так как 0 четное число
+        assertTrue(CourseToolkit.isEven(0));
+    }
 }
