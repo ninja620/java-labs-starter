@@ -8,15 +8,15 @@ class BankAccountTest {
 
     @Test
     void withdrawSuccess() {
-        BankAccount account = new BankAccount(100);
+        BankAccount account = new BankAccount(50);
         account.withdraw(30);
-        assertEquals(70, account.getBalance());
+        assertEquals(20, account.getBalance());
     }
 
     @Test
     void withdrawMoreThanBalance() {
         BankAccount account = new BankAccount(50);
-        assertThrows(IllegalArgumentException.class, () -> account.withdraw(100));
+        assertThrows(IllegalArgumentException.class, () -> account.withdraw(51));
         assertEquals(50, account.getBalance());
     }
 

@@ -8,13 +8,13 @@ public class ProjectTask {
 
     public ProjectTask(String id, String title, int estimatedHours) {
         if (id == null || id.isBlank()) {
-            throw new IllegalArgumentException("id не может быть пустым!");
+            throw new IllegalArgumentException("id не может быть пустым");
         }
         if (title == null || title.isBlank()) {
-            throw new IllegalArgumentException("title не может быть пустым!");
+            throw new IllegalArgumentException("title не может быть пустым");
         }
         if (estimatedHours <= 0) {
-            throw new IllegalArgumentException("Оценка должна быть больше 0!");
+            throw new IllegalArgumentException("Оценка должна быть больше 0");
         }
         this.id = id;
         this.title = title;
@@ -24,7 +24,7 @@ public class ProjectTask {
 
     public void changeStatus(TaskStatus newStatus) {
         if (newStatus == null) {
-            throw new IllegalArgumentException("Статус не может быть null!");
+            throw new IllegalArgumentException("Статус не может быть null");
         }
         status = newStatus;
     }
@@ -35,7 +35,7 @@ public class ProjectTask {
 
     public void increaseEstimate(int hours) {
         if (hours <= 0) {
-            throw new IllegalArgumentException("Часы должны быть больше 0!");
+            throw new IllegalArgumentException("Часы должны быть больше 0");
         }
         estimatedHours += hours;
     }
